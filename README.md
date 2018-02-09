@@ -27,7 +27,7 @@ newProject <- usethis::use_course('https://github.com/jaredlander/LiveFebruary20
 
 After that runs successfully you will have a new folder holding the R project that looks like this.
 
-<img src="images/ProjectFolder.png" width="1033" />
+<img src="images/ProjectFolder.png" width="1036" />
 
 Either double-click the file called LiveFebruary2018.Rproj or run the following line of code.
 
