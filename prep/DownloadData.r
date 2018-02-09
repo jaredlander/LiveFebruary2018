@@ -37,3 +37,21 @@ download.file(
 download.file(
     'https://query.data.world/s/zGvNwNJbY2470sjsVxYFstm426SEf1',
     destfile=file.path(dataDir, 'manhattan_Train.csv'))
+
+# manhattan_Train.rds
+download.file(
+    'https://query.data.world/s/ExZERDJuinFrR8wOzs7xJX2-EsBMZA',
+    destfile=file.path(dataDir, 'manhattan_Train.rds'),
+    mode='wb')
+# manhattan_Test.rds
+download.file(
+    'https://query.data.world/s/uQeJXCnQfIlOguRS_pqBvQ7uXZV6aT',
+    destfile=file.path(dataDir, 'manhattan_Test.rds'),
+    mode='wb')
+# manhattan_Validate.rds
+download.file(
+    'https://query.data.world/s/U3kCu6Mucqbm_kCugKs6O6apqQOaxn',
+    destfile=file.path(dataDir, 'manhattan_Validate.rds'),
+    mode='wb')
+
+
