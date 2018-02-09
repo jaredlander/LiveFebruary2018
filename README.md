@@ -55,7 +55,7 @@ git clone https://github.com/jaredlander/LiveJanuary2018.git
 Data
 ====
 
-Data for the class is kept at [data.world](https://data.world/landeranalytics/training). You can sign up for a free account or run the following code (this requires that you are using an [RStudio Project](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects) setup exactly like this repo).
+Data for the class is kept at [data.world](https://data.world/landeranalytics/training). You can sign up for a free account or run the following code. This requires that you are using an [RStudio Project](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects) setup exactly like this repo, which is done if you followed the preceding code.
 
 ``` r
 source('prep/DownloadData.r')
