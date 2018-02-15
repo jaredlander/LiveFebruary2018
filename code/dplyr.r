@@ -44,3 +44,23 @@ newDiamonds
 diamonds
 
 diamonds %>% mutate(Ratio=price / carat)
+newDiamonds %>% mutate(cut=NULL)
+newDiamonds <- newDiamonds %>% mutate(cut=NULL)
+newDiamonds
+
+diamonds %>% summarize(mean(price))
+diamonds %>% summarize(mean(price), sum(carat))
+diamonds %>% summarize(AvgPrice=mean(price), TotalSize=sum(carat))
+
+diamonds
+
+diamonds %>% group_by(cut)
+diamonds
+
+diamonds %>% group_by(cut) %>% summarize(AvgPrice=mean(price))
+summarize(group_by(diamonds, cut), AvgPrice=mean(price))
+
+diamonds %>% 
+    filter(carat > 1) %>% 
+    group_by(cut, color) %>% 
+    summarize(AvgPrice=mean(price), TotalSize=sum(carat))
