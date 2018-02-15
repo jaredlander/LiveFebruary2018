@@ -40,3 +40,23 @@ ggplot(diamonds, aes(x=cut, y=price)) +
     geom_violin(alpha=1/2, color='grey50', draw_quantiles=c(.25, .50, .75)) +
     scale_color_gradient('carat', low='#56B1F7', high='#c91010') + 
     labs(x='Cut', y='Price', title='Price vs Cut and Carat')
+
+library(ggthemes)
+
+ggplot(diamonds, aes(x=carat, y=price, color=cut)) + 
+    geom_point(shape=1, size=1)
+
+p <- ggplot(diamonds, aes(x=carat, y=price, color=cut)) + 
+    geom_point(shape=1, size=1)
+p
+
+p + geom_smooth()
+
+p + theme_economist()
+p + theme_economist() + scale_color_economist()
+p + theme_wsj() + scale_color_wsj()
+p + theme_fivethirtyeight()
+p + theme_tufte()
+
+p + theme_excel()
+p + theme_excel() + scale_color_excel()
