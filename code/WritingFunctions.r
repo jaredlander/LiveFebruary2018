@@ -26,3 +26,22 @@ timesTwo <- function(x)
     
     return(x)
 }
+
+timesN <- function(x, n)
+{
+    return(x * n)
+}
+
+timesN(2, 3)
+timesN(4, 5)
+
+# this will return an error because we forgot the second argument
+timesN(6)
+
+timesN <- function(x, n=2)
+{
+    return(x * n)
+}
+
+timesN(5, 7)
+timesN(5)
