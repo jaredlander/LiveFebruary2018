@@ -76,3 +76,15 @@ AIC(value1, value2, value3)
 AIC(value2, value4)
 
 BIC(value1, value2, value3)
+
+lotsTest <- readRDS('data/manhattan_Test.rds')
+
+library(dplyr)
+set.seed(4356)
+lotsTest_small <- lotsTest %>% sample_n(20)
+View(lotsTest_small)
+
+lotsPreds3 <- predict(value3, newdata=lotsTest_small,
+                      se.fit=TRUE, interval='prediction')
+head(lotsPreds3$fit)
+lotsPreds3$fit
