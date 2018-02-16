@@ -25,3 +25,10 @@ highPred1.2 <- predict(high1, newdata=lotsTest_small, se.fit=TRUE,
                        type='response')
 
 round(highPred1.2$fit, 2)
+
+unique(lots$NumBldgs)
+
+buildings1 <- glm(NumBldgs ~ LotArea + OwnerType + Landmark,
+                  data=lots,
+                  family=poisson)
+coefplot(buildings1, sort='magnitude')
