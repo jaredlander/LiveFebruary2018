@@ -51,3 +51,23 @@ build.x( ~ Pop * Size - Size, data=boros)
 build.x( ~ Pop * Size * Random, data=boros)
 
 build.x( ~ Pop + Boro, data=boros)
+
+names(lots)
+value3 <- lm(TotalValue ~ LotArea + ZoneDist1 + UnitsTotal + OwnerType + 
+                 Landmark + LotType, data=lots)
+summary(value3)
+coefplot(value3, sort='magnitude')
+
+multiplot(value1, value2, value3, sort='magnitude')
+multiplot(value1, value2, value3, sort='magnitude', single=FALSE)
+
+coefplot(value1, predictors=c('UnitsTotal', 'LotArea'))
+coefplot(value1, predictors=c('LotArea'))
+coefplot(value2, sort='magnitude')
+
+
+value4 <- lm(TotalValue ~ scale(LotArea) + scale(UnitsTotal) + OwnerType, 
+             data=lots)
+coefplot(value4, sort='magnitude')
+multiplot(value2, value4, sort='magnitude', single=FALSE)
+
