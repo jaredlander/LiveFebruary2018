@@ -71,3 +71,8 @@ value4 <- lm(TotalValue ~ scale(LotArea) + scale(UnitsTotal) + OwnerType,
 coefplot(value4, sort='magnitude')
 multiplot(value2, value4, sort='magnitude', single=FALSE)
 
+AIC(value1, value2, value3)
+
+AIC(value2, value4)
+
+BIC(value1, value2, value3)
